@@ -1,0 +1,114 @@
+/* tipografia */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* variables */
+:root {
+  /* colores */
+  --colorbase: #f9eadc;
+  --colorverde1: #136832;
+  --colorverde2: #b0ca83;
+  --colorcafe1: #2b1a0a;
+  --colorboton: #dbfa7e;
+  /* Textos */
+  --titulos: 'Playfair Display', serif;
+  --subtitulos: 'Montserrat', sans-serif;
+  --textos: 'Open Sans', sans-serif;
+}
+
+/* GLOBALES */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-color: var(--colorbase);
+  font-size: 62.5%;
+  font-family: var(--textos);
+}
+body {
+  font-size: 1.6rem;
+  font-family: var();
+}
+header {
+  background-color: var(--colorverde2);
+  display: none;
+}
+
+@media (min-width: 768px) {
+  header {
+    display: block;
+  }
+}
+a {
+  text-decoration: none;
+}
+li {
+  list-style: none;
+}
+
+img {
+  max-width: 100%; /* Nunca serÃ¡ mÃ¡s ancha que su padre */
+  display: block; /* Quita un pequeÃ±o espacio extra que dejan las imÃ¡genes abajo */
+  height: auto; /* Mantiene la proporciÃ³n para que no se vea estirada */
+}
+h1 {
+  font-family: var(--titulos);
+}
+
+h2,
+h3,
+h4 {
+  font-family: var(--subtitulos);
+}
+p {
+  font-family: var(--textos);
+}
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+/* header */
+.header-contactos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+.header-contactos h3 {
+  font-weight: 500;
+  color: var(--colorverde1);
+  padding: 0.9rem;
+}
+.header-contactos--icon {
+  display: flex;
+  justify-content: space-between;
+  gap: 5rem;
+  padding: 0.9rem;
+}
+
+.header-contactos--icon img {
+  width: 30px;
+  height: 30px;
+  filter: invert(30%) sepia(82%) saturate(444%) hue-rotate(97deg)
+    brightness(93%) contrast(92%);
+}
+/* fin de header */
+
+/* inicio del menu */
+.menu {
+  background-color: var(--colorverde1);
+  color: var(--colorbase);
+}
+
+/* fin del menu */
