@@ -13,6 +13,7 @@
   --colorverde2: #b0ca83;
   --colorcafe1: #2b1a0a;
   --colorboton: #dbfa7e;
+  --colorautor: #012e12;
   /* Textos */
   --titulos: 'Playfair Display', serif;
   --subtitulos: 'Montserrat', sans-serif;
@@ -649,3 +650,66 @@ p {
   width: 100%;
 }
 /* fin seccions de videos */
+
+/* INICIO FOOTER */
+.footer {
+  background-color: var(--colorverde1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+.footer--contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+.footer--contenedor-contactos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.footer--contenedor-contactos h2 {
+  font-weight: bold;
+  color: var(--colorbase);
+  line-height: 3.5rem;
+  text-align: center;
+  font-size: 2rem;
+}
+.footer--contenedor-contactos p {
+  color: var(--colorbase);
+  font-weight: bold;
+  padding: 1rem;
+  text-align: left;
+}
+
+.footer--contenedor-contactos ul li a {
+  color: var(--colorbase);
+  font-weight: bold;
+  padding: 1rem;
+  text-align: left;
+  margin-top: 1rem;
+}
+@media (min-width: 37.5rem) {
+  .footer--contenedor {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    justify-content: left;
+  }
+}
+.footer--autor {
+  text-align: center;
+  color: var(--colorbase);
+  background-color: var(--colorautor);
+  padding: 3rem;
+  font-weight: 500;
+  font-size: 1rem;
+}
+/* FIN DEL FOOTER */
