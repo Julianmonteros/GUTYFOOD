@@ -206,6 +206,13 @@ p {
   padding: 1.5rem;
   border-radius: 2rem;
   font-weight: bold;
+  cursor: pointer;
+}
+
+.btn--hero:hover {
+  background-color: var(--colorbase);
+  color: var(--colorcafe1);
+  transition: 0.5s;
 }
 /* versiones tablet */
 @media (min-width: 37.5rem) {
@@ -377,7 +384,7 @@ p {
   justify-content: center;
 }
 .beneficios--contenido h3 {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
   color: var(--colorcafe1);
   line-height: 2.5rem;
@@ -391,6 +398,16 @@ p {
   line-height: 1.8rem;
   padding: 1rem;
 }
+.beneficios--img {
+  width: 100%;
+  margin: 0 auto;
+  object-fit: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
 .beneficios--img2 {
   display: none;
 }
@@ -400,6 +417,20 @@ p {
   }
   .beneficios--img2 {
     display: block;
+    margin: 0 auto;
+    object-fit: cover;
+    width: 100%;
   }
 }
 /* fin seccion beneficios */
+
+/* encusntrasnos */
+.encuentranos h2 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--colorcafe1);
+  line-height: 2.5rem;
+  text-align: center;
+}
+/* fin de encuentranos */
