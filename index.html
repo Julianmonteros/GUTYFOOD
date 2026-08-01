@@ -191,8 +191,9 @@
 
     <!-- inicio de formulario -->
     <section class="formulario">
-        <div class="formulario--contenedor">
-            <div class="formulario--contenedor-texto">
+
+        <div class="formulario--ladoA">
+            <div class="formulario--ladoA-texto">
                 <h2>
                     Cada compra cambia una historia
                 </h2>
@@ -203,28 +204,29 @@
                     oportunidades.
                 </p>
             </div>
-
-            <div class="formulario--contenedor-form">
-                <h2>Contáctanos</h2>
-                <form action="enviar formulario" method="post">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" required>
-
-                    <label for="nombre">Nombre</label>
-                    <input type="text" name="nombre" id="nombre" required>
-
-                    <label for="celular">Celular</label>
-                    <input type="tel" name="celular" id="celular" required pattern="[0-9]{10}" placeholder="0999999999">
-
-                    <label for="comentarios">Comentarios</label>
-                    <textarea name="Comentarios" id="comentarios" rows="4">Ingresa tu comentario</textarea>
-
-                    <button type="submit">Enviar</button>
-
-                </form>
-            </div>
-
         </div>
+
+        <div class="formulario--ladoB">
+            <h2>Contáctanos</h2>
+
+            <form action="enviar formulario" method="post" class="formulario--ladoB-fomr">
+                <label for="email">Email</label>
+                <input type="email" name="email" id="email" required>
+
+                <label for="nombre">Nombre</label>
+                <input type="text" name="nombre" id="nombre" required>
+
+                <label for="celular">Celular</label>
+                <input type="tel" name="celular" id="celular" required pattern="[0-9]{10}" placeholder="0999999999">
+
+                <label for="comentarios">Comentarios</label>
+                <textarea name="Comentarios" id="comentarios" rows="4">Ingresa tu comentario</textarea>
+
+                <button type="submit" class="boton-form">Enviar</button>
+
+            </form>
+        </div>
+
     </section>
     <!-- fin de formulario -->
 

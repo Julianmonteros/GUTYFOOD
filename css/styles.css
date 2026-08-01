@@ -206,6 +206,7 @@ p {
   padding: 1.5rem;
   border-radius: 2rem;
   font-weight: bold;
+  font-size: 1.8rem;
   cursor: pointer;
 }
 
@@ -213,6 +214,7 @@ p {
   background-color: var(--colorbase);
   color: var(--colorcafe1);
   transition: 0.5s;
+  font-size: 1.9rem;
 }
 /* versiones tablet */
 @media (min-width: 37.5rem) {
@@ -427,7 +429,8 @@ p {
 /* encusntrasnos */
 .encuentranos {
   margin-top: 1rem;
-  margin-bottom: 3rem;
+  margin-bottom: 5rem;
+  padding: 3rem;
 }
 .encuentranos h2 {
   margin-top: 3rem;
@@ -448,6 +451,10 @@ p {
   margin: 0 auto;
 }
 @media (min-width: 37.5rem) {
+  .encuentranos {
+    margin-top: 5rem;
+    margin-bottom: 8rem;
+  }
   .encuentranos--logo {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -461,3 +468,133 @@ p {
 }
 
 /* fin de encuentranos */
+
+/* formualrio y contactos */
+.formulario {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.formulario--ladoA {
+  background-color: var(--colorverde2);
+}
+.formulario--ladoA-texto {
+  padding: 3rem;
+}
+.formulario--ladoA-texto h2 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--colorcafe1);
+  line-height: 3.5rem;
+  text-align: center;
+}
+.formulario--ladoA-texto p {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: var(--colorcafe1);
+  line-height: 2.5rem;
+  text-align: justify;
+  padding: 0 0.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.formulario--ladoB {
+  background-color: var(--colorverde1);
+  width: 100%;
+}
+
+.formulario--ladoB h2 {
+  margin-top: 3rem;
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: var(--colorbase);
+  line-height: 3.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.formulario--ladoB-fomr {
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+.formulario--ladoB-fomr label {
+  color: var(--colorbase);
+  font-weight: 600;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-family: var(--subtitulos);
+}
+.formulario--ladoB-fomr input {
+  display: block;
+  border: none;
+  border-radius: 2rem;
+  background: var(--colorbase);
+  opacity: 0.8;
+  height: 3.5rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+}
+.formulario--ladoB-fomr textarea {
+  display: block;
+  border: none;
+  border-radius: 2rem;
+  background: var(--colorbase);
+  opacity: 0.8;
+  height: 3.5rem;
+  margin: 0 auto;
+  width: 100%;
+  padding: 1rem;
+  height: 9rem;
+  margin-bottom: 3rem;
+}
+.boton-form {
+  display: block;
+  border: none;
+  border-radius: 2rem;
+  width: auto;
+  background-color: #dbfa7e;
+  color: #136832;
+  padding: 1.5rem 4rem;
+  font-size: 1.8rem;
+  line-height: 1.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin: 0 auto;
+}
+.boton-form:hover {
+  color: #2b1a0a;
+  background-color: #f9eadc;
+  transition: 0.5s;
+  font-size: 1.9rem;
+}
+@media (min-width: 37.5rem) {
+  .formulario {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .formulario--ladoA {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+  }
+  .formulario--ladoA-texto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .formulario--ladoB {
+    padding: 2rem;
+    height: 100%;
+  }
+}
+/* fin formulario y contactos */
