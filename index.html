@@ -24,49 +24,59 @@
 </head>
 
 <body>
-    <!-- inicio del header -->
-    <header>
-        <section class="header-contactos container">
-            <h3>+593 900 00000</h3>
-            <div class="header-contactos--icon">
-                <a href="https://www.facebook.com/guthyfood">
-                    <img src="img/icono-facebook.svg" alt="Icono Facebook" height="300px" width="300px">
-                </a>
 
-                <a href="https://www.instagram.com/guthyfood/">
-                    <img src="img/icono-instagram.svg" alt="Icono Instagram" height="300px" width="300px">
-                </a>
+    <!-- inicio del HEADER Y MENU -->
+    <header class="navbar">
 
-                <a href="https://api.whatsapp.com/send?phone=593992893032">
-                    <img src="img/icono-wathsapp.svg" alt="Icono wathsapp" height="300px" width="300px">
-                </a>
+        <div class="navbar--container container">
+            <!-- logo de la pagina -->
+            <a href="index.html">
+                <img class="navbar--container-imagen" src="img/logo-gutyfood.png" alt="GUTYFOOD" width="200px"
+                    height="60px">
+            </a>
+            <!-- fin del logo de la pagina -->
 
-            </div>
-        </section>
-    </header>
-    <!-- fin del header -->
+            <!-- inicio de menu -->
+            <nav class="navbar--container-menu">
+                <ul class="navbar--menu-list">
+                    <li>
+                        <a href="index.html">INICIO</a>
+                    </li>
 
-    <!-- inicio del menu -->
-    <nav class="menu">
+                    <li>
+                        <a href="#">NOSOTROS</a>
+                    </li>
 
-        <div class="menu--var container">
+                    <li>
+                        <a href="3">BENEFICIOS</a>
+                    </li>
 
-            <div class="menu--var-img">
-                <img src="img/logo-gutyfood.png" alt="Logo GUTYFOOD" height="150px" width="150px">
-            </div>
+                    <li>
+                        <a href="#">CONTACTOS</a>
+                    </li>
 
-            <ul class="menu--var-list">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#">Nosotros</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Contacto</a></li>
-            </ul>
+                    <li>
+                        <a href="#">VIDEOS</a>
+                    </li>
 
+                </ul>
+
+            </nav>
+
+            <!-- BOTON -->
+            <button class="boton-toggle" aria-label="Abrir Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- FIN DE BOTON -->
+
+            <!-- fin de menu -->
         </div>
 
-    </nav>
+    </header>
 
-    <!-- fin del menu -->
+    <!-- fin del HEADER Y MENU  -->
 
     <!-- inicio del hero -->
     <section class="hero">
@@ -272,7 +282,10 @@
     </footer>
 
     <!-- fin de footer -->
+
+    <!-- querys -->
+    <script src="js/script.js"></script>
 </body>
-<script src="javascript/scripth.js"></script>
+
 
 </html>
