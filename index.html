@@ -213,7 +213,7 @@
         <div class="formulario--ladoB">
             <h2>Contáctanos</h2>
 
-            <form action="enviar formulario" method="post" class="formulario--ladoB-fomr">
+            <form action="enviar.php" method="post" class="formulario--ladoB-fomr" id="form-contacto">
                 <label for="email">Email</label>
                 <input type="email" name="email" id="email" required>
 
@@ -224,10 +224,12 @@
                 <input type="tel" name="celular" id="celular" required pattern="[0-9]{10}" placeholder="0999999999">
 
                 <label for="comentarios">Comentarios</label>
-                <textarea name="Comentarios" id="comentarios" rows="4">Ingresa tu comentario</textarea>
+                <textarea name="comentarios" id="comentarios" rows="4">Ingresa tu comentario</textarea>
 
                 <button type="submit" class="boton-form">Enviar</button>
-
+                <!-- NUEVO: Contenedor para mostrar mensajes de éxito/error -->
+                <div id="form-respuesta"
+                    style="margin-top: 2rem; font-size: 1.6rem; text-align: center; font-weight: bold;"></div>
             </form>
         </div>
 
@@ -319,6 +321,7 @@
 
     <!-- querys -->
     <script src="js/script.js"></script>
+    <script src="js/formulario.js"></script>
 </body>
 
 
