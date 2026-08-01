@@ -122,7 +122,7 @@ p {
   height: 3px;
 }
 /* fin estilos boton */
-@media (max-width: 76.8em) {
+@media (max-width: 60rem) {
   .boton-toggle {
     display: flex;
   }
@@ -158,3 +158,90 @@ p {
 }
 /* queris de menu */
 /* fin queris de menu */ /* fin del HEADER Y MENU */
+
+/* MENU HERO */
+.hero {
+  background-image: url(../img/hero-mobil.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 76.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.hero--texto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1.5rem;
+  line-height: 2.2rem;
+  padding: 6rem;
+}
+.hero--texto h1 {
+  font-size: 4.5rem;
+  font-weight: bold;
+  color: var(--colorbase);
+  line-height: 4.5rem;
+  margin-bottom: 2rem;
+}
+.hero--texto p {
+  color: var(--colorbase);
+  font-size: 1.8rem;
+  line-height: 2.5rem;
+  margin-bottom: 2rem;
+}
+.btn--hero {
+  background-color: var(--colorboton);
+  color: var(--colorverde1);
+  font-family: var(--subtitulos);
+  padding: 1.5rem;
+  border-radius: 2rem;
+  font-weight: bold;
+}
+/* versiones tablet */
+@media (min-width: 37.5rem) {
+  .hero {
+    width: 100%;
+    height: 92rem;
+  }
+
+  .hero--texto {
+    padding: 15rem;
+  }
+}
+/* versiones laptop 1024 */
+@media (min-width: 64rem) {
+  .hero {
+    background-image: url(../img/hero-sambo.jpg);
+    width: 100%;
+    height: 45rem;
+  }
+
+  .hero--texto {
+    padding: 30rem;
+  }
+  .hero--texto h1 {
+    font-size: 4.5rem;
+  }
+  .hero--texto p {
+    font-size: 1.5rem;
+  }
+}
+/* versiones laptop 1440 */
+@media (min-width: 90rem) {
+  .hero {
+    width: 100%;
+    height: 70rem;
+  }
+
+  .hero--texto {
+    padding: 50rem;
+  }
+}
+/* FIN MENU HERO */
