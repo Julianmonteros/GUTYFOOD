@@ -74,6 +74,7 @@ p {
   top: 0;
   left: 0;
   height: 8rem;
+  z-index: 100;
 }
 .navbar--container {
   display: flex;
@@ -135,7 +136,7 @@ p {
     left: 0;
     transform: translateX(100%);
     transition:
-      transform 0.3s ease-in-out opacity 0.3s,
+      transform 0.5s ease-in-out opacity 0.3s,
       visibility 0.3s;
     z-index: 1001;
     visibility: hidden;
@@ -146,6 +147,7 @@ p {
     transform: translateX(0);
     visibility: visible;
     opacity: 1;
+    z-index: 101;
   }
   /* clase de activacion menu*/
 
@@ -239,9 +241,63 @@ p {
     width: 100%;
     height: 70rem;
   }
-
+  .hero--texto h1 {
+    font-size: 5.5rem;
+    line-height: 5.5rem;
+  }
+  .hero--texto p {
+    font-size: 2rem;
+  }
   .hero--texto {
-    padding: 50rem;
+    padding: 60rem;
   }
 }
 /* FIN MENU HERO */
+
+/* estilos de iconos */
+.iconos {
+  text-align: center;
+  background-color: var(--colorverde1);
+  padding: 2rem 0;
+  margin: 0 auto;
+}
+.iconos--producto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+.iconos--producto-card {
+  width: 100%;
+  padding: 1rem;
+}
+.iconos--producto-card img {
+  filter: brightness(0) invert(99%) sepia(21%) saturate(464%) hue-rotate(328deg)
+    brightness(101%) contrast(95%);
+  height: 90px;
+  width: auto;
+  margin: 0 auto;
+}
+.iconos--producto-card h3 {
+  padding: 2rem;
+  color: var(--colorbase);
+}
+
+@media (min-width: 37.5rem) {
+  .iconos--producto {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1;
+    align-items: start;
+  }
+  .iconos--producto-card img {
+    height: 6rem;
+    width: 6rem;
+    object-fit: contain;
+  }
+  .iconos--producto-card h3 {
+    font-size: 1.5rem;
+  }
+}
+/* estilos de iconos */
