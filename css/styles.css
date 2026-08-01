@@ -52,6 +52,7 @@ img {
 }
 h1 {
   font-family: var(--titulos);
+  font-size: 3.5rem;
 }
 
 h2,
@@ -188,7 +189,7 @@ p {
   padding: 6rem;
 }
 .hero--texto h1 {
-  font-size: 4.5rem;
+  font-size: 3.5rem;
   font-weight: bold;
   color: var(--colorbase);
   line-height: 4.5rem;
@@ -360,10 +361,10 @@ p {
   padding: 1rem;
 }
 .nosotros--texto p {
-  font-size: 1.2rem;
-  font-weight: 600;
+  font-size: 1.5rem;
+  font-weight: 500;
   color: var(--colorcafe1);
-  line-height: 2rem;
+  line-height: 1.8rem;
   text-align: justify;
   padding: 0 0.5rem;
 }
@@ -372,6 +373,10 @@ p {
   .nosotros--contenido {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+  }
+  .nosotros--texto p {
+    font-size: 1.6rem;
+    line-height: 2rem;
   }
 }
 /* seccion nosotros */
