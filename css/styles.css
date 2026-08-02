@@ -14,6 +14,7 @@
   --colorcafe1: #2b1a0a;
   --colorboton: #dbfa7e;
   --colorautor: #012e12;
+  --colortransparente: #e8e582d7;
   /* Textos */
   --titulos: 'Playfair Display', serif;
   --subtitulos: 'Montserrat', sans-serif;
@@ -728,3 +729,74 @@ p {
   font-size: 1rem;
 }
 /* FIN DEL FOOTER */
+
+/* CONCURSO */
+.concurso {
+  height: 60rem;
+  width: 100%;
+  background-image: url(../img/banner-concurso.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 5px 4px 1px rgba(0, 0, 0, 0.274);
+}
+.concurso--textos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--colortransparente);
+  padding: 4rem;
+}
+
+.concurso--textos h2 {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+.concurso--textos h3 {
+  font-family: var(--titulos);
+  font-size: 4rem;
+  margin-bottom: 2.5rem;
+}
+.concurso--textos p {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.concurso--textos a {
+  font-size: 1.8rem;
+  background-color: var(--colorcafe1);
+  color: var(--colorbase);
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-bottom: 1.5rem;
+  cursor: pointer;
+  font-weight: bold;
+}
+.concurso--textos a:hover {
+  background-color: var(--colorverde1);
+  color: var(--colorbase);
+  font-size: 1.9rem;
+  transition: 0.4s;
+}
+.vacio {
+  display: none;
+}
+
+@media (min-width: 64rem) {
+  .vacio {
+    display: grid;
+  }
+  .concurso {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+  }
+  .concurso--textos {
+    border-radius: 0 2rem 2rem 0;
+  }
+}
+/* FIN DE CONCURSO */
