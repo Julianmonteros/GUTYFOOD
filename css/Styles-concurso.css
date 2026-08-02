@@ -1,0 +1,41 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+/* cabecera */
+.cabecera {
+  background-image: url(../img/banner-concurso.jpg);
+  background-repeat: no-repeat;
+  background-position: right;
+  background-size: cover;
+  height: 20rem;
+  width: 100%;
+  z-index: 100;
+  box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  line-height: 1.8rem;
+  text-align: left;
+}
+.cabecera h1 {
+  font-size: 6rem;
+  padding: 3rem;
+  margin-right: 4rem;
+  font-weight: bold;
+}
+
+.cabecera h2 {
+  font-size: 3rem;
+  padding: 3rem;
+  margin-right: 4rem;
+}
+/* fin de cabecera */
