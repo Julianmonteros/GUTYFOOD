@@ -1,58 +1,78 @@
-
 <?php
-// Configuramos la respuesta en formato JSON
+// Configuración de respuesta en formato JSON
 header('Content-Type: application/json');
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Sanitizamos los campos para evitar inyecciones de código malicioso
-    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
-    $nombre = htmlspecialchars(trim($_POST['nombre']), ENT_QUOTES, 'UTF-8');
-    $celular = htmlspecialchars(trim($_POST['celular']), ENT_QUOTES, 'UTF-8');
-    $comentarios = htmlspecialchars(trim($_POST['comentarios']), ENT_QUOTES, 'UTF-8');
 
-    // Validación básica en el servidor
+    // 1. Datos de conexión a MySQL en XAMPP
+    $host     = "127.0.0.1"; // Usamos IP para evitar bloqueos por socket en macOS
+    $user     = "root";      // Usuario predeterminado de XAMPP
+    $password = "";          // Por defecto en XAMPP la clave está vacía
+    $dbname   = "gutyfood"; // Nombre de tu base de datos
+
+    // Crear conexión
+    $conexion = new mysqli($host, $user, $password, $dbname);
+
+    // Verificar si hay error en la conexión
+    if ($conexion->connect_error) {
+        echo json_encode([
+            'status'  => 'error',
+            'mensaje' => 'Error de conexión a la base de datos: ' . $conexion->connect_error
+        ]);
+        exit;
+    }
+
+    // Asegurar codificación UTF-8 para tildes y caracteres especiales
+    $conexion->set_charset("utf8mb4");
+
+    // 2. Sanitización y validación de datos recibidos del formulario
+    $email       = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
+    $nombre      = htmlspecialchars(trim($_POST['nombre'] ?? ''), ENT_QUOTES, 'UTF-8');
+    $celular     = htmlspecialchars(trim($_POST['celular'] ?? ''), ENT_QUOTES, 'UTF-8');
+    $comentarios = htmlspecialchars(trim($_POST['comentarios'] ?? ''), ENT_QUOTES, 'UTF-8');
+
     if (empty($email) || empty($nombre) || empty($celular)) {
         echo json_encode([
-            'status' => 'error',
+            'status'  => 'error',
             'mensaje' => 'Por favor, completa todos los campos obligatorios.'
         ]);
         exit;
     }
 
-    // =======================================================
-    // CONFIGURACIÓN DE TU CORREO
-    // =======================================================
-    $destinatario = "tu-correo@tuservidor.com"; // <-- ¡CAMBIA ESTO por tu correo real!
-    $asunto = "Nuevo mensaje de contacto de Guthyfood";
+    // 3. Preparar la consulta SQL de inserción
+    $sql = "INSERT INTO contactos (email, nombre, celular, comentarios) VALUES (?, ?, ?, ?)";
+    $stmt = $conexion->prepare($sql);
 
-    // Estructura del mensaje de correo
-    $cuerpoMensaje = "Has recibido un nuevo mensaje desde el sitio web Guthyfood:\n\n";
-    $cuerpoMensaje .= "Nombre: " . $nombre . "\n";
-    $cuerpoMensaje .= "Email: " . $email . "\n";
-    $cuerpoMensaje .= "Celular: " . $celular . "\n";
-    $cuerpoMensaje .= "Comentarios:\n" . $comentarios . "\n";
+    if ($stmt) {
+        // Enlazar parámetros: 'ssss' indica cuatro datos de tipo cadena (string)
+        $stmt->bind_param("ssss", $email, $nombre, $celular, $comentarios);
 
-    // Cabeceras del correo (Headers)
-    $headers = "From: no-reply@guthyfood.com\r\n"; // Remitente aparente
-    $headers .= "Reply-To: " . $email . "\r\n";  // Al responder, le responderás al cliente
-    $headers .= "X-Mailer: PHP/" . phpversion();
+        if ($stmt->execute()) {
+            echo json_encode([
+                'status'  => 'success',
+                'mensaje' => '¡Tu mensaje ha sido guardado exitosamente en la base de datos!'
+            ]);
+        } else {
+            echo json_encode([
+                'status'  => 'error',
+                'mensaje' => 'No se pudo guardar la información: ' . $stmt->error
+            ]);
+        }
 
-    // Enviamos el correo mediante la función nativa mail() de PHP
-    if (mail($destinatario, $asunto, $cuerpoMensaje, $headers)) {
-        echo json_encode([
-            'status' => 'success',
-            'mensaje' => '¡Tu mensaje ha sido enviado con éxito! Nos comunicaremos pronto.'
-        ]);
+        $stmt->close();
     } else {
         echo json_encode([
-            'status' => 'error',
-            'mensaje' => 'El servidor no pudo enviar el correo. Inténtalo de nuevo.'
+            'status'  => 'error',
+            'mensaje' => 'Error en la preparación de la consulta SQL: ' . $conexion->error
         ]);
     }
+
+    $conexion->close();
+
 } else {
-    // Si intentan entrar directo a enviar.php sin enviar datos
     echo json_encode([
-        'status' => 'error',
+        'status'  => 'error',
         'mensaje' => 'Acceso no permitido.'
     ]);
 }
+?>
