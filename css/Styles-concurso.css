@@ -9,13 +9,21 @@
 html {
   font-size: 62.5%;
 }
+p {
+  font-size: 1.8rem;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
 /* cabecera */
 .cabecera {
-  background-image: url(../img/banner-concurso.jpg);
+  background-image: url(../img/banner-concurso-aji.jpeg);
   background-repeat: no-repeat;
-  background-position: right;
+  background-position: left;
   background-size: cover;
-  height: 20rem;
+  height: 13rem;
   width: 100%;
   z-index: 100;
   box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.2);
@@ -26,16 +34,105 @@ html {
   line-height: 1.8rem;
   text-align: left;
 }
-.cabecera h1 {
-  font-size: 6rem;
-  padding: 3rem;
+@media (min-width: 37.5rem) {
+  .cabecera {
+    height: 40rem;
+  }
+}
+
+/* fin de cabecera */
+
+/* informacion */
+.informacion h1 {
+  font-size: 4rem;
+  padding: 1.8rem;
   margin-right: 4rem;
   font-weight: bold;
 }
 
-.cabecera h2 {
-  font-size: 3rem;
-  padding: 3rem;
+.informacion h2 {
+  font-size: 2rem;
+  padding: 1.5rem;
   margin-right: 4rem;
 }
-/* fin de cabecera */
+/* fin informacion */
+
+/* documentos */
+.documentos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem;
+}
+@media (min-width: 37.5rem) {
+  .documentos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+.ladoA {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  gap: 2rem;
+}
+.documentos a {
+  text-decoration: none;
+  color: rgb(1, 1, 1);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: #b6e106;
+  padding: 2rem;
+  border-radius: 2rem;
+  text-align: center;
+}
+.documentos a:hover {
+  background-color: #84cd0653;
+  color: rgb(65, 64, 64);
+  font-size: 2.1rem;
+  transition: 0.4s;
+}
+
+.btn-inscripcion {
+  text-decoration: none;
+  color: rgb(1, 1, 1);
+  font-size: 2rem;
+  font-weight: bold;
+  font-family: sans-serif;
+  background-color: #e17706;
+  padding: 2rem;
+  border-radius: 2rem;
+  display: block;
+  margin: 0 auto;
+  width: 35%;
+  text-align: center;
+}
+
+.btn-inscripcion:hover {
+  background-color: #b6e106;
+  transition: 0.4s;
+  font-size: 2.1rem;
+}
+
+.boton {
+  padding: 2rem;
+}
+
+.ladob {
+  padding: 2rem;
+}
+/* fin documentos */
+
+footer {
+  background-color: green;
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  font-size: 2rem;
+}
