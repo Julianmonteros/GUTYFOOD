@@ -71,12 +71,13 @@ p {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
+    align-items: start;
   }
 }
 .ladoA {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
 
   gap: 2rem;
@@ -135,4 +136,8 @@ footer {
   padding: 2rem;
   text-align: center;
   font-size: 2rem;
+}
+.img-pago {
+  display: block;
+  width: 100%;
 }
