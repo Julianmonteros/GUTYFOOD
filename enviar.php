@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($conexion->connect_error) {
         echo json_encode([
             'status'  => 'error',
-            'mensaje' => 'Error de conexión a la base de datos: ' . $conexion->connect_error
+            'mensaje' => 'Error al enviar: ' . $conexion->connect_error
         ]);
         exit;
     }
