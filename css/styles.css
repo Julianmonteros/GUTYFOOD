@@ -736,7 +736,9 @@ p {
   color: var(--colorbase);
   font-size: 3.5rem;
   padding: 3rem;
+  cursor: pointer;
 }
+
 /* FIN DEL FOOTER */
 
 /* CONCURSO */
