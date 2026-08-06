@@ -487,6 +487,9 @@ p {
 .formulario--ladoA {
   background-color: var(--colorverde2);
 }
+.formulario--ladoA-img {
+  border-radius: 3rem;
+}
 .formulario--ladoA-texto {
   padding: 3rem;
 }
@@ -727,6 +730,12 @@ p {
   padding: 3rem;
   font-weight: 500;
   font-size: 1rem;
+}
+
+.footer--contenedor-contactos a i {
+  color: var(--colorbase);
+  font-size: 3.5rem;
+  padding: 3rem;
 }
 /* FIN DEL FOOTER */
 
