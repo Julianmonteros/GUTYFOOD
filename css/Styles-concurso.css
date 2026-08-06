@@ -21,9 +21,9 @@ p {
 .cabecera {
   background-image: url(../img/banner-concurso-aji.jpeg);
   background-repeat: no-repeat;
-  background-position: left;
   background-size: cover;
-  height: 13rem;
+  background-position: right;
+  height: 10rem;
   width: 100%;
   z-index: 100;
   box-shadow: 0 3px 4px 1px rgba(0, 0, 0, 0.2);
@@ -36,7 +36,19 @@ p {
 }
 @media (min-width: 37.5rem) {
   .cabecera {
-    height: 40rem;
+    height: 20rem;
+  }
+}
+
+@media (min-width: 64rem) {
+  .cabecera {
+    height: 25rem;
+  }
+}
+
+@media (min-width: 90rem) {
+  .cabecera {
+    height: 37rem;
   }
 }
 
@@ -103,7 +115,7 @@ p {
 .btn-inscripcion {
   text-decoration: none;
   color: rgb(1, 1, 1);
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: bold;
   font-family: sans-serif;
   background-color: #e17706;
@@ -111,14 +123,20 @@ p {
   border-radius: 2rem;
   display: block;
   margin: 0 auto;
-  width: 35%;
+  width: 100%;
   text-align: center;
+}
+
+@media (min-width: 37.5rem) {
+  .btn-inscripcion {
+    width: 50%;
+  }
 }
 
 .btn-inscripcion:hover {
   background-color: #b6e106;
   transition: 0.4s;
-  font-size: 2.1rem;
+  font-size: 1.7rem;
 }
 
 .boton {
