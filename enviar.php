@@ -5,10 +5,10 @@ header('Content-Type: application/json');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     // 1. Datos de conexión a MySQL en XAMPP
-    $host     = "127.0.0.1"; // Usamos IP para evitar bloqueos por socket en macOS
-    $user     = "root";      // Usuario predeterminado de XAMPP
-    $password = "";          // Por defecto en XAMPP la clave está vacía
-    $dbname   = "gutyfood"; // Nombre de tu base de datos
+    $host     = "localhost"; // Usamos IP para evitar bloqueos por socket en macOS
+    $user     = "miguel-guty23@hotmail.com";      // Usuario predeterminado de XAMPP
+    $password = "Caballo+23";          // Por defecto en XAMPP la clave está vacía
+    $dbname   = "guthyfoo_gutyfood"; // Nombre de tu base de datos
 
     // Crear conexión
     $conexion = new mysqli($host, $user, $password, $dbname);
